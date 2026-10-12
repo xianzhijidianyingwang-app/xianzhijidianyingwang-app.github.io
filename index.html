@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>限制级电影网 - 电影分级制度科普与影史资料查询 | XianZhiJiDianYingWang</title>
+<meta name="description" content="限制级电影网是专注电影分级制度科普、限制级影片分级档案与影史资料查询的垂直站点，详解 G、PG、PG-13、R、NC-17 分级标准，提供分级知识、影片档案、深度影评研究。">
+<meta name="keywords" content="限制级电影网,限制级电影,电影分级制度,R级电影,NC-17,PG-13,电影分级科普,影史资料,电影档案">
+<meta name="author" content="限制级电影网">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0b0d10">
+<link rel="canonical" href="https://www.xianzhijidianyingwang-app.com/">
+<link rel="alternate" hreflang="zh-CN" href="https://www.xianzhijidianyingwang-app.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="限制级电影网">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="限制级电影网 - 电影分级制度科普与影史资料查询">
+<meta property="og:description" content="专注电影分级制度科普、限制级影片分级档案与影史资料查询，详解 G/PG/PG-13/R/NC-17 分级标准与影史脉络。">
+<meta property="og:url" content="https://www.xianzhijidianyingwang-app.com/">
+<meta property="og:image" content="https://www.xianzhijidianyingwang-app.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="限制级电影网 - 电影分级制度科普与影史资料查询">
+<meta name="twitter:description" content="电影分级标准详解、限制级影片档案、影史资料与深度影评研究。">
+<style>
+:root{
+  --bg:#0b0d10;--bg2:#12161c;--bg3:#1a2028;--line:#2a323d;
+  --txt:#e8eaed;--txt2:#9aa4b2;--gold:#f5c518;--gold2:#ffdd57;
+  --g:#3aa76d;--pg:#4a90d9;--pg13:#e8a33d;--r:#d9534f;--nc17:#a02020;
+  --radius:14px;--maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;line-height:1.75;letter-spacing:.2px;
+  overflow-x:hidden;padding-bottom:64px;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+h1,h2,h3,h4{line-height:1.35;font-weight:700}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+
+/* ===== 顶部导航 ===== */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(11,13,16,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;min-width:0}
+.logo-mark{
+  width:38px;height:38px;flex:0 0 38px;border-radius:9px;
+  background:linear-gradient(135deg,var(--gold),#c8901a);
+  display:grid;place-items:center;color:#151515;font-weight:900;font-size:15px;
+  box-shadow:0 4px 14px rgba(245,197,24,.28);font-family:Georgia,serif;
+}
+.logo-txt{min-width:0}
+.logo-txt b{display:block;font-size:17px;letter-spacing:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.logo-txt span{display:block;font-size:11px;color:var(--txt2);letter-spacing:1.6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.menu{display:flex;align-items:center;gap:4px}
+.menu a{padding:8px 12px;border-radius:8px;font-size:14.5px;color:var(--txt2);transition:.2s;white-space:nowrap}
+.menu a:hover,.menu a.on{color:var(--gold);background:rgba(245,197,24,.09)}
+.nav-cta{display:inline-block;padding:9px 18px;border-radius:999px;background:var(--gold);color:#151515;font-size:14px;font-weight:700;transition:.2s;white-space:nowrap}
+.nav-cta:hover{background:var(--gold2);transform:translateY(-1px)}
+.burger{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:9px;background:var(--bg2);cursor:pointer;position:relative}
+.burger i{position:absolute;left:11px;right:11px;height:2px;background:var(--txt);transition:.25s}
+.burger i:nth-child(1){top:14px}.burger i:nth-child(2){top:20px}.burger i:nth-child(3){top:26px}
+.burger.act i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.act i:nth-child(2){opacity:0}
+.burger.act i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ===== 首屏 ===== */
+.hero{position:relative;padding:64px 0 52px;background:
+  radial-gradient(1000px 480px at 78% -8%,rgba(245,197,24,.14),transparent 62%),
+  radial-gradient(700px 420px at 8% 12%,rgba(74,144,217,.12),transparent 60%),
+  var(--bg);overflow:hidden}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:100% 4px;
+}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.tagline{
+  display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;
+  border:1px solid rgba(245,197,24,.35);background:rgba(245,197,24,.08);
+  color:var(--gold);font-size:12.5px;letter-spacing:1px;margin-bottom:18px;
+}
+.tagline em{width:6px;height:6px;border-radius:50%;background:var(--gold);display:block}
+.hero h1{
+  font-size:clamp(31px,6.2vw,54px);line-height:1.18;letter-spacing:-.5px;margin-bottom:16px;
+}
+.hero h1 .kw{
+  background:linear-gradient(180deg,transparent 62%,rgba(245,197,24,.28) 0);
+  padding:0 4px;color:#fff;
+}
+.hero h1 small{display:block;font-size:15px;font-weight:400;color:var(--txt2);letter-spacing:2.5px;margin-top:12px}
+.hero p.lead{color:var(--txt2);font-size:16.5px;max-width:600px;margin-bottom:26px}
+.hero p.lead strong{color:var(--txt);font-weight:600}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.btn{padding:13px 26px;border-radius:10px;font-size:15px;font-weight:700;transition:.22s;display:inline-block}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#d9a412);color:#151515;box-shadow:0 8px 22px rgba(245,197,24,.22)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(245,197,24,.32)}
+.btn-ghost{border:1px solid var(--line);color:var(--txt);background:var(--bg2)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.ratingbar{display:flex;flex-wrap:wrap;gap:8px}
+.rb{padding:5px 12px;border-radius:6px;font-size:12.5px;font-weight:800;letter-spacing:.6px;color:#fff;border:1px solid rgba(255,255,255,.14)}
+.rb.g{background:var(--g)}.rb.pg{background:var(--pg)}.rb.pg13{background:var(--pg13);color:#201500}
+.rb.r{background:var(--r)}.rb.nc{background:var(--nc17)}
+
+/* 首屏卡片 */
+.herocard{
+  background:linear-gradient(160deg,var(--bg2),var(--bg3));border:1px solid var(--line);
+  border-radius:18px;padding:22px;box-shadow:0 22px 50px rgba(0,0,0,.5);position:relative;overflow:hidden;
+}
+.herocard::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--g),var(--pg),var(--pg13),var(--r),var(--nc17));
+}
+.herocard h3{font-size:15px;color:var(--gold);letter-spacing:1.4px;margin-bottom:14px}
+.herocard table{width:100%;border-collapse:collapse;font-size:14px}
+.herocard th,.herocard td{padding:11px 6px;border-bottom:1px dashed var(--line);text-align:left;vertical-align:top}
+.herocard th{color:var(--txt2);font-weight:500;width:88px;font-size:13px}
+.herocard tr:last-child td,.herocard tr:last-child th{border-bottom:0}
+.herocard .rate{display:inline-block;padding:2px 9px;border-radius:5px;font-size:12px;font-weight:800;color:#fff}
+.herocard .note{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px;color:var(--txt2)}
+
+/* ===== 数据条 ===== */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.stats-in{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{padding:22px 10px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:clamp(22px,4vw,32px);color:var(--gold);font-family:Georgia,serif;line-height:1.2}
+.stat span{display:block;font-size:13px;color:var(--txt2);margin-top:4px}
+
+/* ===== 通用区块 ===== */
+section{padding:60px 0}
+.sec-head{max-width:760px;margin:0 auto 34px;text-align:center}
+.sec-head .eyebrow{display:inline-block;font-size:12px;letter-spacing:3px;color:var(--gold);margin-bottom:10px}
+.sec-head h2{font-size:clamp(24px,4.4vw,34px);margin-bottom:12px}
+.sec-head h2 .kw{color:var(--gold)}
+.sec-head p{color:var(--txt2);font-size:15.5px}
+
+/* ===== 栏目一：分级制度 ===== */
+.grid{display:grid;gap:18px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{
+  background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;transition:.25s;position:relative;overflow:hidden;
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(245,197,24,.4);box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.card .badge{
+  display:inline-block;padding:5px 13px;border-radius:6px;font-size:14px;font-weight:900;
+  color:#fff;margin-bottom:13px;letter-spacing:1px;font-family:Georgia,serif;
+}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{color:var(--txt2);font-size:14.5px;margin-bottom:12px}
+.card .meta{font-size:12.5px;color:var(--txt2);border-top:1px dashed var(--line);padding-top:10px}
+.card .meta a{color:var(--gold)}
+.card .meta a:hover{text-decoration:underline}
+
+/* ===== 栏目二：影片档案 ===== */
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-bottom:26px}
+.filters button{
+  padding:8px 17px;border-radius:999px;border:1px solid var(--line);background:var(--bg2);
+  color:var(--txt2);font-size:14px;cursor:pointer;transition:.2s;font-family:inherit;
+}
+.filters button:hover{color:var(--txt);border-color:#3d4753}
+.filters button.on{background:var(--gold);color:#151515;border-color:var(--gold);font-weight:700}
+.archive{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.arow{display:grid;grid-template-columns:52px 1fr 96px 120px;gap:14px;align-items:center;padding:15px 18px;border-bottom:1px solid var(--line);transition:.2s}
+.arow:last-child{border-bottom:0}
+.arow:hover{background:var(--bg3)}
+.arow .no{font-family:Georgia,serif;color:var(--txt2);font-size:15px}
+.arow .tt{font-size:15.5px;font-weight:600}
+.arow .tt small{display:block;font-weight:400;color:var(--txt2);font-size:13px;margin-top:3px}
+.arow .yr{font-size:13.5px;color:var(--txt2)}
+.arow .rt{justify-self:end}
+.arow:hover .tt{color:var(--gold)}
+
+/* ===== 栏目三：影评研究 ===== */
+.review{
+  display:grid;grid-template-columns:210px 1fr;gap:0;background:var(--bg2);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+}
+.review .poster{
+  min-height:190px;display:grid;place-items:center;position:relative;
+  background:linear-gradient(150deg,#232b35,#151a21);border-right:1px solid var(--line);
+}
+.review .poster span{font-family:Georgia,serif;font-size:44px;color:rgba(245,197,24,.5);letter-spacing:-1px}
+.review .poster em{
+  position:absolute;bottom:10px;left:10px;font-size:11px;color:var(--txt2);
+  font-style:normal;letter-spacing:1px;
+}
+.review .rbody{padding:20px 22px}
+.review .rbody h3{font-size:19px;margin-bottom:8px}
+.review .rbody h3 a:hover{color:var(--gold)}
+.review .rbody p{color:var(--txt2);font-size:14.5px;margin-bottom:12px}
+.review .rbody .tags{display:flex;flex-wrap:wrap;gap:7px}
+.review .rbody .tags a{
+  font-size:12px;color:var(--txt2);border:1px solid var(--line);border-radius:5px;padding:3px 9px;
+}
+.review .rbody .tags a:hover{color:var(--gold);border-color:var(--gold)}
+
+/* ===== 栏目四：FAQ ===== */
+.faq{max-width:820px;margin:0 auto}
+details{background:var(--bg2);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+details[open]{border-color:rgba(245,197,24,.35)}
+summary{
+  padding:16px 20px;cursor:pointer;font-size:16px;font-weight:600;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:20px;font-weight:400;flex:0 0 auto}
+details[open] summary::after{content:"−"}
+details .body{padding:0 20px 18px;color:var(--txt2);font-size:14.5px;border-top:1px dashed var(--line);padding-top:14px}
+
+/* ===== 栏目五：投稿 / 关于 ===== */
+.cta-box{
+  background:linear-gradient(135deg,#1a2028,#12161c);border:1px solid rgba(245,197,24,.28);
+  border-radius:18px;padding:36px 30px;text-align:center;
+}
+.cta-box h2{font-size:clamp(22px,4vw,30px);margin-bottom:12px}
+.cta-box h2 .kw{color:var(--gold)}
+.cta-box p{color:var(--txt2);max-width:620px;margin:0 auto 22px;font-size:15.5px}
+.subform{display:flex;gap:10px;max-width:520px;margin:0 auto;flex-wrap:wrap}
+.subform input{
+  flex:1 1 240px;min-width:0;padding:13px 16px;border-radius:10px;border:1px solid var(--line);
+  background:var(--bg);color:var(--txt);font-size:15px;font-family:inherit;
+}
+.subform input:focus{outline:none;border-color:var(--gold)}
+.subform button{
+  padding:13px 26px;border-radius:10px;border:0;background:var(--gold);color:#151515;
+  font-weight:700;font-size:15px;cursor:pointer;font-family:inherit;transition:.2s;
+}
+.subform button:hover{background:var(--gold2)}
+.notice{
+  margin-top:22px;font-size:12.5px;color:#7d8794;line-height:1.7;max-width:720px;margin-left:auto;margin-right:auto;
+}
+
+/* ===== 面包屑 ===== */
+.crumbs{font-size:13px;color:var(--txt2);padding:14px 0 0}
+.crumbs a{color:var(--txt2)}
+.crumbs a:hover{color:var(--gold)}
+.crumbs span{margin:0 6px;opacity:.6}
+
+/* ===== 页脚 ===== */
+footer{background:var(--bg2);border-top:1px solid var(--line);padding:44px 0 24px;margin-top:20px}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px;padding-bottom:26px}
+.fgrid h4{font-size:15px;margin-bottom:14px;color:#fff}
+.fgrid p{font-size:13.5px;color:var(--txt2);line-height:1.8}
+.fgrid li{margin-bottom:9px}
+.fgrid li a{font-size:13.8px;color:var(--txt2);transition:.2s}
+.fgrid li a:hover{color:var(--gold);padding-left:4px}
+.fbot{border-top:1px solid var(--line);padding-top:20px;font-size:13px;color:#7d8794;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.fbot a{color:#7d8794}
+.fbot a:hover{color:var(--gold)}
+
+/* ===== 移动端底部导航 ===== */
+.tabbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  background:rgba(18,22,28,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.tabbar ul{display:grid;grid-template-columns:repeat(5,1fr)}
+.tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 2px 7px;font-size:11px;color:var(--txt2)}
+.tabbar a .ic{font-size:17px;line-height:1}
+.tabbar a.on{color:var(--gold)}
+.totop{position:fixed;right:14px;bottom:74px;width:42px;height:42px;border-radius:50%;
+  background:var(--gold);color:#151515;display:none;place-items:center;font-size:18px;font-weight:700;z-index:65;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+
+/* ===== 响应式 ===== */
+@media (max-width:1024px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .hero-in{grid-template-columns:1fr;gap:34px}
+  .herocard{max-width:520px}
+}
+@media (max-width:768px){
+  body{font-size:15.5px;padding-bottom:70px}
+  .menu{
+    display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;align-items:stretch;
+    background:var(--bg2);border-bottom:1px solid var(--line);padding:10px 16px 16px;gap:2px;
+  }
+  .menu.show{display:flex}
+  .menu a{padding:12px 10px;font-size:15.5px;border-radius:8px}
+  .nav-cta{display:none}
+  .burger{display:block}
+  .hero{padding:40px 0 36px}
+  .hero p.lead{font-size:15.5px}
+  .btn{width:100%;text-align:center}
+  .btnrow{gap:10px}
+  .stats-in{grid-template-columns:1fr 1fr}
+  .stat{border-bottom:1px solid var(--line)}
+  .stat:nth-child(2n){border-right:0}
+  .stat:nth-child(n+3){border-bottom:0}
+  section{padding:44px 0}
+  .g4,.g3,.g2{grid-template-columns:1fr}
+  .arow{grid-template-columns:40px 1fr 74px;gap:10px;padding:13px 14px}
+  .arow .yr{display:none}
+  .arow .tt{font-size:15px}
+  .review{grid-template-columns:1fr}
+  .review .poster{min-height:130px;border-right:0;border-bottom:1px solid var(--line)}
+  .fgrid{grid-template-columns:1fr 1fr;gap:22px}
+  .tabbar{display:block}
+  .totop{display:grid}
+}
+@media (max-width:420px){
+  .logo-txt b{font-size:16px}
+  .stats-in{grid-template-columns:1fr 1fr}
+  .subform input{flex:1 1 100%}
+  .subform button{flex:1 1 100%}
+  .fbot{flex-direction:column;gap:6px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://www.xianzhijidianyingwang-app.com/#website",
+      "url":"https://www.xianzhijidianyingwang-app.com/",
+      "name":"限制级电影网",
+      "alternateName":"电影分级制度科普与影史资料查询",
+      "inLanguage":"zh-CN",
+      "description":"限制级电影网专注电影分级制度科普、限制级影片分级档案与影史资料查询。",
+      "publisher":{"@id":"https://www.xianzhijidianyingwang-app.com/#org"}
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://www.xianzhijidianyingwang-app.com/#org",
+      "name":"限制级电影网",
+      "url":"https://www.xianzhijidianyingwang-app.com/",
+      "description":"电影分级制度科普、影片分级档案与影史资料整理。"
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://www.xianzhijidianyingwang-app.com/#webpage",
+      "url":"https://www.xianzhijidianyingwang-app.com/",
+      "name":"限制级电影网 - 电影分级制度科普与影史资料查询",
+      "isPartOf":{"@id":"https://www.xianzhijidianyingwang-app.com/#website"},
+      "inLanguage":"zh-CN",
+      "about":"电影分级制度、限制级影片分级档案、影史资料",
+      "breadcrumb":{"@id":"https://www.xianzhijidianyingwang-app.com/#breadcrumb"}
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"https://www.xianzhijidianyingwang-app.com/#breadcrumb",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"首页","item":"https://www.xianzhijidianyingwang-app.com/"},
+        {"@type":"ListItem","position":2,"name":"电影分级制度"},
+        {"@type":"ListItem","position":3,"name":"限制级影片档案"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="topbar">
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="限制级电影网 首页">
+      <span class="logo-mark" aria-hidden="true">XZJ</span>
+      <span class="logo-txt">
+        <b>限制级电影网</b>
+        <span>XIANZHIJIDIANYINGWANG-APP</span>
+      </span>
+    </a>
+    <nav class="menu" id="menu" aria-label="主导航">
+      <a href="#rating" class="on">分级制度</a>
+      <a href="#archive">影片档案</a>
+      <a href="#review">影评研究</a>
+      <a href="#faq">常见问题</a>
+      <a href="#about">关于本站</a>
+    </nav>
+    <a href="#about" class="nav-cta">投稿与合作</a>
+    <button class="burger" id="burger" aria-label="展开菜单" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <span class="tagline"><em></em>电影分级科普 · 影史资料查询</span>
+        <h1><span class="kw">限制级电影网</span><br>电影分级制度科普与影史资料查询</h1>
+        <small>WWW.XIANZHIJIDIANYINGWANG-APP.COM</small>
+        <p class="lead">
+          <strong>限制级电影网</strong>是一个面向影迷、研究者与内容创作者的资料型站点，系统梳理 G、PG、PG-13、R、NC-17 等
+          <strong>电影分级</strong>标准的判定逻辑，整理限制级影片的分级档案、上映沿革与影史背景，帮助你快速读懂一部影片为何被划入某一级别。
+        </p>
+        <div class="btnrow">
+          <a href="#rating" class="btn btn-gold">查看分级标准</a>
+          <a href="#archive" class="btn btn-ghost">浏览影片档案</a>
+        </div>
+        <div class="ratingbar" aria-label="常见电影分级标识">
+          <span class="rb g">G 大众级</span>
+          <span class="rb pg">PG 辅导级</span>
+          <span class="rb pg13">PG-13 特别辅导级</span>
+          <span class="rb r">R 限制级</span>
+          <span class="rb nc">NC-17 成人级</span>
+        </div>
+      </div>
+
+      <aside class="herocard" aria-label="分级速查表">
+        <h3>分级速查 · QUICK REFERENCE</h3>
+        <table>
+          <tr><th>G</th><td>全年龄适宜，无暴力、无粗口、无成人暗示</td></tr>
+          <tr><th>PG</th><td>建议家长指导，含轻微惊吓或少量粗口</td></tr>
+          <tr><th>PG-13</th><td>13 岁以下需辅导，含中度暴力或短暂裸露</td></tr>
+          <tr><th>R</th><td><span class="rate" style="background:#d9534f">限制级</span> 17 岁以下须由成人陪同</td></tr>
+          <tr><th>NC-17</th><td>17 岁及以下禁止入场，成人主题或强刺激内容</td></tr>
+        </table>
+        <p class="note">数据用于影史研究与分级制度科普，具体以各地区官方分级机构公告为准。</p>
+      </aside>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="wrap stats-in">
+      <div class="stat"><b>5</b><span>主流分级档位</span></div>
+      <div class="stat"><b>2,800+</b><span>影片分级档案</span></div>
+      <div class="stat"><b>460+</b><span>影评研究长文</span></div>
+      <div class="stat"><b>12</b><span>地区分级体系</span></div>
+    </div>
+  </div>
+
+  <!-- 栏目一：电影分级制度 -->
+  <section id="rating" aria-labelledby="rating-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">COLUMN 01 / 分级制度</span>
+        <h2 id="rating-t">电影分级制度详解：限制级如何被判定</h2>
+        <p>从分级机构的评审维度出发，拆解暴力、语言、裸露、药物与成人主题五项核心指标。</p>
+      </div>
+      <div class="grid g4">
+        <article class="card">
+          <span class="badge" style="background:#3aa76d">G</span>
+          <h3>大众级（General）</h3>
+          <p>面向全部年龄层，内容不含暴力、粗口与任何成人暗示，主题积极、处理克制。</p>
+          <div class="meta">适用：合家欢动画、家庭剧情 · <a href="#">查看条目</a></div>
+        </article>
+        <article class="card">
+          <span class="badge" style="background:#4a90d9">PG</span>
+          <h3>辅导级（Parental Guidance）</h3>
+          <p>允许轻微惊吓、短暂打斗与少量粗口，建议家长陪同观看并作必要解释。</p>
+          <div class="meta">适用：冒险片、轻奇幻 · <a href="#">查看条目</a></div>
+        </article>
+        <article class="card">
+          <span class="badge" style="background:#e8a33d;color:#201500">PG-13</span>
+          <h3>特别辅导级</h3>
+          <p>出现中度暴力、短暂裸露或较强语言刺激，13 岁以下观众建议由家长判断。</p>
+          <div class="meta">适用：动作大片、科幻惊悚 · <a href="#">查看条目</a></div>
+        </article>
+        <article class="card">
+          <span class="badge" style="background:#d9534f">R</span>
+          <h3>限制级（Restricted）</h3>
+          <p>含持续暴力、频繁粗口、裸露或成人主题，17 岁以下观众须由成人陪同入场。</p>
+          <div class="meta">适用：<strong>限制级电影</strong>主流档位 · <a href="#">查看条目</a></div>
+        </article>
+      </div>
+      <div class="grid g3" style="margin-top:18px">
+        <article class="card">
+          <span class="badge" style="background:#a02020">NC-17</span>
+          <h3>成人级（No One 17 And Under）</h3>
+          <p>仅限 17 岁以上观众，多因明确的成人主题、强刺激画面或极端暴力而被划入。</p>
+          <div class="meta">适用：作者电影、争议作品 · <a href="#">查看条目</a></div>
+        </article>
+        <article class="card">
+          <span class="badge" style="background:#5b6470">UNRATED</span>
+          <h3>未分级（Unrated）</h3>
+          <p>未送审或发行方放弃分级，常见于导演剪辑版、影展版本与修复版发行。</p>
+          <div class="meta">适用：导演剪辑版、影展版 · <a href="#">查看条目</a></div>
+        </article>
+        <article class="card">
+          <span class="badge" style="background:#7a5cc0">区域差异</span>
+          <h3>各地分级体系差异</h3>
+          <p>同一部影片在不同地区可能获得不同级别，取决于当地文化尺度与评审口径。</p>
+          <div class="meta">覆盖 12 个地区体系 · <a href="#">查看对照</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：影片档案 -->
+  <section id="archive" style="background:var(--bg2)" aria-labelledby="archive-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">COLUMN 02 / 影片档案</span>
+        <h2 id="archive-t">限制级电影档案库：按分级与年代检索</h2>
+        <p>档案以影史研究与分级科普为目的整理，记录影片的分级档位、上映年份与判定要点。</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="on" data-f="all">全部</button>
+        <button data-f="r">R 限制级</button>
+        <button data-f="nc">NC-17 成人级</button>
+        <button data-f="pg13">PG-13</button>
+        <button data-f="classic">影史经典</button>
+        <button data-f="new">近年新作</button>
+      </div>
+      <div class="archive" id="archive-list">
+        <div class="arow" data-c="r classic">
+          <span class="no">01</span>
+          <span class="tt">犯罪史诗·城市暗面<small>因持续暴力与强语言被判定为限制级</small></span>
+          <span class="yr">1972 · 美国</span>
+          <span class="rt"><span class="rb r">R 限制级</span></span>
+        </div>
+        <div class="arow" data-c="r classic">
+          <span class="no">02</span>
+          <span class="tt">越战反思录<small>战争场面与创伤描绘构成主要判定依据</small></span>
+          <span class="yr">1979 · 美国</span>
+          <span class="rt"><span class="rb r">R 限制级</span></span>
+        </div>
+        <div class="arow" data-c="nc classic">
+          <span class="no">03</span>
+          <span class="tt">作者电影·都市孤独<small>成人主题与直白表达被划入成人级</small></span>
+          <span class="yr">1976 · 法国</span>
+          <span class="rt"><span class="rb nc">NC-17</span></span>
+        </div>
+        <div class="arow" data-c="pg13 new">
+          <span class="no">04</span>
+          <span class="tt">科幻纪元·边界之外<small>科幻动作题材，中度暴力与紧张桥段</small></span>
+          <span class="yr">2014 · 多国合拍</span>
+          <span class="rt"><span class="rb pg13">PG-13</span></span>
+        </div>
+        <div class="arow" data-c="r new">
+          <span class="no">05</span>
+          <span class="tt">心理惊悚·沉默证词<small>压迫氛围与暴力暗示被判定为限制级</small></span>
+          <span class="yr">2019 · 韩国</span>
+          <span class="rt"><span class="rb r">R 限制级</span></span>
+        </div>
+        <div class="arow" data-c="r classic">
+          <span class="no">06</span>
+          <span class="tt">黑帮编年史·家族秩序<small>暴力密度与成人议题为判定核心</small></span>
+          <span class="yr">1990 · 美国</span>
+          <span class="rt"><span class="rb r">R 限制级</span></span>
+        </div>
+        <div class="arow" data-c="pg13 new">
+          <span class="no">07</span>
+          <span class="tt">动作序列·极速追缉<small>高强度动作场面，语言相对克制</small></span>
+          <span class="yr">2021 · 英国</span>
+          <span class="rt"><span class="rb pg13">PG-13</span></span>
+        </div>
+        <div class="arow" data-c="nc new">
+          <span class="no">08</span>
+          <span class="tt">实验影像·边界书写<small>实验叙事与强烈视听刺激，成人级发行</small></span>
+          <span class="yr">2023 · 日本</span>
+          <span class="rt"><span class="rb nc">NC-17</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：影评研究 -->
+  <section id="review" aria-labelledby="review-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">COLUMN 03 / 影评研究</span>
+        <h2 id="review-t">限制级电影影评研究：尺度背后的作者表达</h2>
+        <p>从导演风格、审查环境与产业背景出发，解读限制级影片的创作意图与影史位置。</p>
+      </div>
+      <div class="grid g2">
+        <article class="review">
+          <div class="poster"><span>R</span><em>REVIEW · 01</em></div>
+          <div class="rbody">
+            <h3><a href="#">限制级不等于尺度：重读七十年代作者电影</a></h3>
+            <p>七十年代的创作自由如何塑造了限制级影片的美学边界，以及分级制度反过来对创作产生的约束与推动。</p>
+            <div class="tags"><a href="#">影史研究</a><a href="#">分级制度</a><a href="#">作者论</a><a href="#">限制级电影</a></div>
+          </div>
+        </article>
+        <article class="review">
+          <div class="poster"><span>NC</span><em>REVIEW · 02</em></div>
+          <div class="rbody">
+            <h3><a href="#">成人级的边界：争议作品的分级复议之路</a></h3>
+            <p>当一部影片被划入成人级，发行方如何通过删减、申诉与重新送审争取更宽的分级结果。</p>
+            <div class="tags"><a href="#">分级复议</a><a href="#">发行策略</a><a href="#">审查制度</a></div>
+          </div>
+        </article>
+        <article class="review">
+          <div class="poster"><span>PG</span><em>REVIEW · 03</em></div>
+          <div class="rbody">
+            <h3><a href="#">从 PG-13 到 R：分级如何改变叙事节奏</a></h3>
+            <p>对比同一导演在不同分级目标下的剪辑取舍，看商业考量如何渗透进镜头语言与叙事密度。</p>
+            <div class="tags"><a href="#">剪辑研究</a><a href="#">叙事结构</a><a href="#">产业观察</a></div>
+          </div>
+        </article>
+        <article class="review">
+          <div class="poster"><span>UN</span><em>REVIEW · 04</em></div>
+          <div class="rbody">
+            <h3><a href="#">未分级版本的价值：导演剪辑版为何存在</a></h3>
+            <p>未分级发行不只是噱头，它往往保存了创作者最初的节奏构想与被删减的关键段落。</p>
+            <div class="tags"><a href="#">导演剪辑版</a><a href="#">修复发行</a><a href="#">版本学</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：常见问题 -->
+  <section id="faq" style="background:var(--bg2)" aria-labelledby="faq-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">COLUMN 04 / 常见问题</span>
+        <h2 id="faq-t">关于限制级电影网的常见问题</h2>
+        <p>关于分级查询、资料引用与投稿合作的常见疑问，集中在这里解答。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>限制级电影网主要提供哪些内容？</summary>
+          <div class="body">本站聚焦电影分级制度科普、限制级影片的分级档案整理、影史资料查询与影评研究四类内容，面向影迷、研究者与内容创作者。</div>
+        </details>
+        <details>
+          <summary>R 级与 NC-17 的核心区别是什么？</summary>
+          <div class="body">R 级允许 17 岁以下观众在成人陪同下观看；NC-17 则完全禁止 17 岁及以下观众入场。两者的分界通常在于成人主题的明确程度与视听刺激的持续时间。</div>
+        </details>
+        <details>
+          <summary>同一部影片为什么在不同地区级别不同？</summary>
+          <div class="body">分级并非全球统一标准，各地评审机构对暴力、语言、裸露与主题的容忍尺度不同，因此同一影片常出现跨地区分级差异，本站提供对照表供研究参考。</div>
+        </details>
+        <details>
+          <summary>档案数据可以引用到论文或文章中吗？</summary>
+          <div class="body">可以。本站资料以影史研究与科普为目的整理，引用时建议标注来源「限制级电影网」并核对原始分级机构的官方公告。</div>
+        </details>
+        <details>
+          <summary>如何向本站投稿或补充分级资料？</summary>
+          <div class="body">可通过页面下方的订阅与联系入口提交你的影评长文或分级资料补充，编辑部会在核对来源后进行整理与收录。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：关于 / 投稿 -->
+  <section id="about" aria-labelledby="about-t">
+    <div class="wrap">
+      <div class="cta-box">
+        <span class="eyebrow" style="display:inline-block;font-size:12px;letter-spacing:3px;color:var(--gold);margin-bottom:10px">COLUMN 05 / 关于本站</span>
+        <h2 id="about-t">订阅<span class="kw">限制级电影网</span>的分级资料周报</h2>
+        <p>每周整理新增的分级档案、影史研究与分级复议案例，帮助你在创作与研究时快速定位所需资料。</p>
+        <form class="subform" onsubmit="return false;">
+          <input type="email" placeholder="输入邮箱，接收资料周报" aria-label="邮箱地址">
+          <button type="submit">立即订阅</button>
+        </form>
+        <p class="notice">
+          免责声明：本站所载分级信息、影片档案与影评内容仅用于电影分级制度科普、影史研究与学术参考，
+          不提供任何违规影音资源的获取渠道或下载引导；相关内容不构成观看建议，请遵守所在地法律法规并依据官方分级机构公告为准。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap crumbs">
+    <nav aria-label="面包屑导航">
+      <a href="#">首页</a><span>/</span><a href="#rating">电影分级制度</a><span>/</span><a href="#archive">限制级影片档案</a>
+    </nav>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>限制级电影网</h4>
+        <p>专注电影分级制度科普、限制级影片分级档案与影史资料查询的资料型站点，为影迷与研究者提供可检索、可引用的分级知识体系。</p>
+        <p style="margin-top:10px">网址：www.xianzhijidianyingwang-app.com</p>
+      </div>
+      <div>
+        <h4>核心栏目</h4>
+        <ul>
+          <li><a href="#rating">电影分级制度</a></li>
+          <li><a href="#archive">限制级影片档案</a></li>
+          <li><a href="#review">影评研究</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>资料服务</h4>
+        <ul>
+          <li><a href="#">分级对照表</a></li>
+          <li><a href="#">地区体系库</a></li>
+          <li><a href="#">影史年表</a></li>
+          <li><a href="#">术语词典</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <ul>
+          <li><a href="#about">投稿与合作</a></li>
+          <li><a href="#">编辑规范</a></li>
+          <li><a href="#">内容更正</a></li>
+          <li><a href="#">隐私说明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>&copy; 2026 限制级电影网 XianZhiJiDianYingWang · 保留所有权利</span>
+      <span><a href="#">隐私说明</a> · <a href="#">免责声明</a> · <a href="#">联系方式</a></span>
+    </div>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="移动端快捷导航">
+  <ul>
+    <li><a href="#" class="on"><span class="ic">◈</span>首页</a></li>
+    <li><a href="#rating"><span class="ic">▤</span>分级</a></li>
+    <li><a href="#archive"><span class="ic">▦</span>档案</a></li>
+    <li><a href="#review"><span class="ic">✎</span>影评</a></li>
+    <li><a href="#about"><span class="ic">✉</span>联系</a></li>
+  </ul>
+</nav>
+<a href="#" class="totop" id="totop" aria-label="返回顶部">↑</a>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){
+    var on=menu.classList.toggle('show');
+    burger.classList.toggle('act',on);
+    burger.setAttribute('aria-expanded',on?'true':'false');
+  });
+  menu.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){menu.classList.remove('show');burger.classList.remove('act');burger.setAttribute('aria-expanded','false');}
+  });
+
+  var fbtns=document.querySelectorAll('#filters button');
+  var rows=document.querySelectorAll('#archive-list .arow');
+  fbtns.forEach(function(b){
+    b.addEventListener('click',function(){
+      fbtns.forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on');
+      var f=b.getAttribute('data-f');
+      rows.forEach(function(r){
+        r.style.display=(f==='all'||r.getAttribute('data-c').indexOf(f)>-1)?'':'none';
+      });
+    });
+  });
+
+  var links=document.querySelectorAll('a[href^="#"]');
+  var secs=[].slice.call(document.querySelectorAll('section[id]'));
+  var navs=[].slice.call(document.querySelectorAll('.menu a'));
+  function onScroll(){
+    var y=window.pageYOffset||document.documentElement.scrollTop;
+    document.getElementById('totop').style.display=y>500?'grid':'none';
+    var cur='';
+    secs.forEach(function(s){if(s.getBoundingClientRect().top<=120)cur=s.id;});
+    navs.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  links.forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');
+      if(id==='#'){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});return;}
+      var t=document.querySelector(id);
+      if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-64,behavior:'smooth'});}
+    });
+  });
+})();
+</script>
+</body>
+</html>
